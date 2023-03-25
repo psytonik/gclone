@@ -10,5 +10,12 @@
     .link {
         @apply hover:underline cursor-pointer
     }
+    .signInBtn {
+        @apply bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-all
+    }
+    .headerIcon {
+        @apply text-4xl bg-transparent hover:bg-gray-200 cursor-pointer rounded-full p-2
+    }
+
 }
 

@@ -3,8 +3,8 @@ import HomeSearch from '../components/HomeSearch';
 import Footer from '../components/Footer';
 import CountryLookup from '../components/CountryLookup';
 import SearchHeader from '../components/SearchHeader';
-
-
+import SearchBox from '../components/SearchBox';
+import SearchHeaderOptions from '../components/SearchHeaderOptions';
 
 
 
@@ -13,5 +13,7 @@ export {
 	HomeSearch,
 	Footer,
 	CountryLookup,
-	SearchHeader
+	SearchHeader,
+	SearchBox,
+	SearchHeaderOptions
 }
