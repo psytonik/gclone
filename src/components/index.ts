@@ -1,7 +1,7 @@
 import HomeHeader from '../components/HomeHeader';
 import HomeSearch from '../components/HomeSearch';
-
-
+import Footer from '../components/Footer'
+import CountryLookup from '../components/CountryLookup';
 
 
 
@@ -10,5 +10,7 @@ import HomeSearch from '../components/HomeSearch';
 
 export {
 	HomeHeader,
-	HomeSearch
+	HomeSearch,
+	Footer,
+	CountryLookup
 }

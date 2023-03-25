@@ -1,5 +1,6 @@
 import './globals.css'
 import React, {ReactNode} from "react";
+import {Footer} from "@/components";
 
 
 export const metadata = {
@@ -11,7 +12,12 @@ export default function RootLayout({children}: { children: ReactNode }) {
 
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <main>
+            {children}
+        </main>
+        <Footer/>
+      </body>
     </html>
   )
 }

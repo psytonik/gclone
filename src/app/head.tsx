@@ -1,4 +1,9 @@
+export const metadata = {
+	title: 'G-Clone',
+};
+
 export default function Head() {
+
 	return (
 		<>
 			<title>G-Clone</title>
