@@ -14,7 +14,7 @@ const SearchBox = () => {
 	const onSubmitForm = (e:FormEvent) => {
 		e.preventDefault();
 		if(!query.trim()) return;
-		router.push(`/search?q=${query}`);
+		router.push(`/search/web?q=${query}`);
 	}
 
 	return (

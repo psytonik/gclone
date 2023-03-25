@@ -21,7 +21,10 @@
     }
     .searchForm {
         @apply flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 rounded-full px-5 py-3 hover:shadow-md
-        focus-within:shadow-md transition-shadow sm:max-w-xl lg:max-w-2xl
+        focus-within:shadow-md transition-shadow sm:max-w-xl lg:max-w-2xl;
+    }
+    .searchOptions {
+        @apply flex items-center space-x-1 border-b-4 border-transparent active:text-blue-500 cursor-pointer pb-3 px-2
     }
 }
 

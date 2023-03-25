@@ -13,7 +13,7 @@ const HomeSearch = () => {
 		if(!input.trim()){
 			return;
 		}
-		router.push(`/search?q=${input}`)
+		router.push(`/search/web?q=${input}`)
 	}
 	const randomSearch = async () => {
 		setRandomSearchLoading(true);
@@ -25,7 +25,7 @@ const HomeSearch = () => {
 			return;
 		}
 
-		router.push(`/search?q=${response}`);
+		router.push(`/search/web?q=${response}`);
 		setRandomSearchLoading(false);
 	}
 	return (
