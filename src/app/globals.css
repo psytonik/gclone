@@ -5,17 +5,23 @@
 @layer components {
     .btn {
         @apply bg-[#f8f9fa] rounded-md text-sm text-gray-800 hover:ring-1 hover:ring-gray-200 focus:outline-none
-        active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow
+        active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow;
     }
     .link {
-        @apply hover:underline cursor-pointer
+        @apply hover:underline cursor-pointer;
     }
     .signInBtn {
-        @apply bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-all
+        @apply bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-all;
     }
     .headerIcon {
-        @apply text-4xl bg-transparent hover:bg-gray-200 cursor-pointer rounded-full p-2
+        @apply text-4xl bg-transparent hover:bg-gray-200 cursor-pointer rounded-full p-2;
     }
-
+    .searchBoxIcons {
+        @apply text-xl text-gray-500 ml-3 cursor-pointer
+    }
+    .searchForm {
+        @apply flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 rounded-full px-5 py-3 hover:shadow-md
+        focus-within:shadow-md transition-shadow sm:max-w-xl lg:max-w-2xl
+    }
 }
 

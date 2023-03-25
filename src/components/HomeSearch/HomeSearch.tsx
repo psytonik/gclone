@@ -32,9 +32,7 @@ const HomeSearch = () => {
 		<>
 			<form
 				onSubmit={handleSubmit}
-				className="flex w-full mt-5 mx-auto max-w-[90%]
-				border border-gray-200 rounded-full px-5 py-3 hover:shadow-md
-				focus-within:shadow-md transition-shadow sm:max-w-xl lg:max-w-2xl"
+				className="searchForm"
 			>
 
 				<AiOutlineSearch className="text-xl text-gray-500 mr-3"/>
@@ -46,8 +44,8 @@ const HomeSearch = () => {
 					value={input}
 				/>
 
-				<Image src="/mic.svg" alt="microphone"  width={24} height={24} className="text-xl text-gray-500 ml-3"/>
-				<Image src="/camera.svg" alt="camera"  width={24} height={24} className="text-xl text-gray-500 ml-3"/>
+				<Image src="/mic.svg" alt="microphone"  width={24} height={24} className="searchBoxIcons"/>
+				<Image src="/camera.svg" alt="camera"  width={24} height={24} className="searchBoxIcons"/>
 			</form>
 
 			<div className="flex mt-7 space-x-4">
