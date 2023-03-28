@@ -5,7 +5,7 @@ import CountryLookup from '../components/CountryLookup';
 import SearchHeader from '../components/SearchHeader';
 import SearchBox from '../components/SearchBox';
 import SearchHeaderOptions from '../components/SearchHeaderOptions';
-
+import WebSearchResults from '../components/WebSearchResults';
 
 
 export {
@@ -15,5 +15,6 @@ export {
 	CountryLookup,
 	SearchHeader,
 	SearchBox,
-	SearchHeaderOptions
+	SearchHeaderOptions,
+	WebSearchResults
 }
