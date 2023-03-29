@@ -13,8 +13,8 @@ const WebSearchResults = ({searchData}:any) => {
 				return (
 					<div key={index} className="mb-8 max-w-xl ">
 						<div className="group flex flex-col">
-							<Link href={item.link} className="text-xl truncate font-medium text-blue-800">{item.title}</Link>
 							<Link href={item.link} className="text-sm truncate">{item.formattedUrl}</Link>
+							<Link href={item.link} className="text-xl truncate font-medium text-blue-800">{item.title}</Link>
 						</div>
 						<p className="text-gray-600">{parse(item.htmlSnippet)}</p>
 					</div>

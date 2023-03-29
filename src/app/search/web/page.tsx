@@ -6,7 +6,7 @@ const GOOGLE_CX_ID = process.env.NEXT_PUBLIC_GOOGLE_CONTEXT_ID;
 
 const SearchPage = async({searchParams:{q}}:{searchParams:{q:string}}) => {
 
-	await new Promise((resolve)=>setTimeout(resolve,5000))
+	// await new Promise((resolve)=>setTimeout(resolve,5000))
 	const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CX_ID}&q=${q}`)
 	if(!response.ok){
 		throw new Error('Something went wrong');

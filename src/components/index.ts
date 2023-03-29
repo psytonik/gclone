@@ -6,7 +6,7 @@ import SearchHeader from '../components/SearchHeader';
 import SearchBox from '../components/SearchBox';
 import SearchHeaderOptions from '../components/SearchHeaderOptions';
 import WebSearchResults from '../components/WebSearchResults';
-
+import ImageSearchResults from '../components/ImageSearchResults';
 
 export {
 	HomeHeader,
@@ -16,5 +16,6 @@ export {
 	SearchHeader,
 	SearchBox,
 	SearchHeaderOptions,
-	WebSearchResults
+	WebSearchResults,
+	ImageSearchResults
 }
