@@ -4,11 +4,13 @@ import {WebSearchResults} from "@/components";
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 const GOOGLE_CX_ID = process.env.NEXT_PUBLIC_GOOGLE_CONTEXT_ID;
 
-const SearchPage = async({searchParams:{q}}:{searchParams:{q:string}}) => {
-
+const SearchPage = async({searchParams:{q,start = 1}}:{searchParams:{q:string,start:number}}) => {
 	// await new Promise((resolve)=>setTimeout(resolve,5000))
-	const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CX_ID}&q=${q}`)
+	const response = await fetch(
+		`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${
+			GOOGLE_CX_ID}&q=${q}&start=${start}`)
 	if(!response.ok){
+		console.log(response)
 		throw new Error('Something went wrong');
 	}
 
@@ -29,7 +31,7 @@ const SearchPage = async({searchParams:{q}}:{searchParams:{q:string}}) => {
 	return (
 		<>
 
-			{result && <WebSearchResults searchData={data}/>}
+			{result && <WebSearchResults />}
 		</>
 	);
 };

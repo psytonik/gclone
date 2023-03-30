@@ -3,10 +3,15 @@ import Link from "next/link";
 import {ImageSearchResults} from "@/components";
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 const GOOGLE_CX_ID = process.env.NEXT_PUBLIC_GOOGLE_CONTEXT_ID;
-const ImageSearchPage = async ({searchParams:{q}}:any) => {
+const ImageSearchPage = async ({searchParams}:any) => {
+	const {q,start = 1} = searchParams;
+
 	// await new Promise((resolve)=>setTimeout(resolve,5000))
-	const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CX_ID}&q=${q}&searchType=image`)
+	const response = await fetch(
+		`https://www.googleapis.com/customsearch/v1?key=${
+			GOOGLE_API_KEY}&cx=${GOOGLE_CX_ID}&q=${q}&searchType=image&start=${start}`)
 	if(!response.ok){
+		console.log(response);
 		throw new Error('Something went wrong');
 	}
 
@@ -26,7 +31,7 @@ const ImageSearchPage = async ({searchParams:{q}}:any) => {
 
 	return (
 		<>
-			{result && <ImageSearchResults searchData={data}/>}
+			{result && <ImageSearchResults />}
 		</>
 	);
 };

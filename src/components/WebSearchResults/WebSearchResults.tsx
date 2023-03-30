@@ -2,10 +2,12 @@
 import React from 'react';
 import Link from "next/link";
 import parse from 'html-react-parser';
+import {PaginationButtons} from "@/components";
+
 const WebSearchResults = ({searchData}:any) => {
 	const {items,searchInformation} = searchData;
 	return (
-		<div className="w-full mx-auto px-3 pb-24 sm:pl-[5%] md:pl-[14%] lg:pl-40">
+		<div className="w-full mx-auto px-3 pb-40 sm:pb-24 sm:pl-[5%] md:pl-[14%] lg:pl-40">
 			<p className="text-gray-600 text-sm mb-5 mt-3 ">
 				About: {searchInformation?.formattedTotalResults} results {searchInformation?.formattedSearchTime} seconds
 			</p>
@@ -20,6 +22,9 @@ const WebSearchResults = ({searchData}:any) => {
 					</div>
 				)
 			})}
+
+			<PaginationButtons data={searchInformation}/>
+
 		</div>
 	);
 };
