@@ -31,7 +31,7 @@ const ImageSearchPage = async ({searchParams}:any) => {
 
 	return (
 		<>
-			{result && <ImageSearchResults />}
+			{result && <ImageSearchResults searchData={data}/>}
 		</>
 	);
 };

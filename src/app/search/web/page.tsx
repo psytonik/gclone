@@ -10,7 +10,7 @@ const SearchPage = async({searchParams:{q,start = 1}}:{searchParams:{q:string,st
 		`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${
 			GOOGLE_CX_ID}&q=${q}&start=${start}`)
 	if(!response.ok){
-		console.log(response)
+		console.log(response, " RESPONSE MANA")
 		throw new Error('Something went wrong');
 	}
 
@@ -30,8 +30,7 @@ const SearchPage = async({searchParams:{q,start = 1}}:{searchParams:{q:string,st
 
 	return (
 		<>
-
-			{result && <WebSearchResults />}
+			{result && <WebSearchResults searchData={data}/>}
 		</>
 	);
 };

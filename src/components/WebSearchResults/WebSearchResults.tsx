@@ -23,7 +23,7 @@ const WebSearchResults = ({searchData}:any) => {
 				)
 			})}
 
-			<PaginationButtons data={searchInformation}/>
+			<PaginationButtons/>
 
 		</div>
 	);
