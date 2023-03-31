@@ -8,7 +8,7 @@ const GOOGLE_CX_ID = process.env.NEXT_PUBLIC_GOOGLE_CONTEXT_ID;
 const ImageSearchPage = async ({searchParams}:any) => {
 	const {q,start = 1} = searchParams;
 
-	// await new Promise((resolve)=>setTimeout(resolve,5000))
+	await new Promise((resolve)=>setTimeout(resolve,2000))
 	const response = await fetch(
 		`https://www.googleapis.com/customsearch/v1?key=${
 			GOOGLE_API_KEY}&cx=${GOOGLE_CX_ID}&q=${q}&searchType=image&start=${start}`)
